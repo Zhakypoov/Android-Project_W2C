@@ -2,8 +2,14 @@ package com.example.w2c.navigation
 
 import android.media.metrics.Event
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.RowScope
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.material.BottomNavigation
+import androidx.compose.material.BottomNavigationItem
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.NavigationBar
 import androidx.compose.material3.NavigationBarItem
@@ -11,6 +17,8 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
@@ -34,31 +42,41 @@ fun AppNavigation(){
    val navController: NavHostController = rememberNavController()
 
     Scaffold(
-        bottomBar = {
-             NavigationBar {
-                 val navBackStackEntry by navController.currentBackStackEntryAsState()
-                 val currentDestination = navBackStackEntry?.destination
 
-                 listOfNavItems.forEach { navItems ->
-                     NavigationBarItem(selected = currentDestination?.hierarchy?.any { it.route == navItems.route} == true,
-                         onClick = {
-                                   navController.navigate(navItems.route){
-                                       popUpTo(navController.graph.findStartDestination().id){
-                                           saveState = true
-                                       }
-                                       launchSingleTop = true
-                                       restoreState = true
-                                   }
-                         },
-                         icon = {
-                             Image(
-                                 painter = painterResource(id = navItems.icon),
-                                 contentDescription = null, // Provide a content description if needed
-                                 modifier = Modifier.size(24.dp) // Adjust the size as needed
-                             )
-                         })
-                 }
-             }
+        bottomBar = {
+
+
+            BottomNavigation(
+                backgroundColor = colorResource(id = R.color.primaryColor),
+            ) {
+                val navBackStackEntry by navController.currentBackStackEntryAsState()
+                val currentDestination = navBackStackEntry?.destination
+
+                listOfNavItems.forEach { navItems ->
+                    BottomNavigationItem(
+                        selected = currentDestination?.hierarchy?.any { it.route == navItems.route } == true,
+                        onClick = {
+                            navController.navigate(navItems.route) {
+                                popUpTo(navController.graph.findStartDestination().id) {
+                                    saveState = true
+                                }
+                                launchSingleTop = true
+                                restoreState = true
+                            }
+                        },
+                        icon = {
+                            Image(
+                                painter = painterResource(id = navItems.icon),
+                                contentDescription = null,
+                                modifier = Modifier.size(30.dp)
+                            )
+                        },
+                        selectedContentColor = Color.Black,
+                        unselectedContentColor = Color.Gray
+                    )
+                }
+            }
+
         }
     ) {
         paddingValues ->

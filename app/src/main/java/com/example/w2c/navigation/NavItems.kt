@@ -8,20 +8,18 @@ import com.example.w2c.R
 data class NavItems(
     val label: String,
     val icon: Int,
-    val route: String
+    val route: String,
+
 )
 
 val listOfNavItems = listOf(
     NavItems(
         label = "Home",
-        icon = R.drawable.home_btn,
-        route = Screens.HomeScreen.name
+        icon = R.drawable.home_01 ,
+        route = Screens.HomeScreen.name,
+
     ),
-    NavItems(
-        label = "Roommate",
-        icon = R.drawable.people_btn,
-        route = Screens.RoommateScreen.name
-    ),
+
     NavItems(
         label = "Chat",
         icon = R.drawable.chat_btn,
