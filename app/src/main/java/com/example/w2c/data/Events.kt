@@ -1,11 +1,13 @@
-package com.example.w2c.model
+package com.example.w2c.data
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
-@Serializable
-
+@Entity
 data class Events(
+   @PrimaryKey val id: Int,
     val title: String,
     val description:String,
     val time: String,
