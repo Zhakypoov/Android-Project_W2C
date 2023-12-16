@@ -7,21 +7,20 @@ plugins {
 }
 
 android {
-    compileSdk = 33
+    namespace = "com.example.w2c"
+    compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.inventory"
+        applicationId = "com.example.w2c"
         minSdk = 24
         targetSdk = 33
         versionCode = 1
         versionName = "1.0"
-
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
             useSupportLibrary = true
         }
     }
-
     buildTypes {
         release {
             isMinifyEnabled = false
@@ -31,6 +30,7 @@ android {
             )
         }
     }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
@@ -49,7 +49,7 @@ android {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
         }
     }
-    namespace = "com.example.inventory"
+    namespace = "com.example.w2c"
 }
 dependencies {
 
