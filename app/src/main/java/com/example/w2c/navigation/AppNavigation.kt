@@ -1,18 +1,11 @@
 package com.example.w2c.navigation
 
-import android.media.metrics.Event
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.RowScope
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.material.BottomNavigation
 import androidx.compose.material.BottomNavigationItem
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.NavigationBar
-import androidx.compose.material3.NavigationBarItem
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -21,7 +14,6 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
-import androidx.navigation.NavController
 import androidx.navigation.NavDestination.Companion.hierarchy
 import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.NavHostController
@@ -31,11 +23,14 @@ import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 
 import com.example.w2c.R
+import com.example.w2c.model.eventslist
+
 import com.example.w2c.screens.ChatScreen
-import com.example.w2c.screens.EventScreen
+
 import com.example.w2c.screens.HomeScreen
 import com.example.w2c.screens.ProfileScreen
 import com.example.w2c.screens.RoommateScreen
+import com.example.w2c.screens.EventScreen
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -93,7 +88,7 @@ fun AppNavigation(){
                 ChatScreen()
             }
             composable(route = Screens.EventScreen.name){
-                EventScreen()
+                EventScreen(events = eventslist)
             }
             composable(route = Screens.ProfileScreen.name){
                 ProfileScreen()
