@@ -30,5 +30,26 @@ data class Events(
             location = "Трц Москва",
             img = "https://sxodim.com/uploads/images/2023/12/16/optimized/37272c18e262f564a8236741c6278921_800xauto-q-85.jpg"
         ),
+        Events(
+            title = "Юмористическое шоу «На слабо» (первый мотор)",
+            time = "18:00",
+            location = "Трц Москва",
+            img = "https://sxodim.com/uploads/images/2023/12/16/optimized/37272c18e262f564a8236741c6278921_800xauto-q-85.jpg"
+        ),
 
-    )
+        Events(
+            title = "Юмористическое шоу «На слабо» (первый мотор)",
+            time = "18:00",
+            location = "Трц Москва",
+            img = "https://sxodim.com/uploads/images/2023/12/16/optimized/37272c18e262f564a8236741c6278921_800xauto-q-85.jpg"
+        ),
+
+        Events(
+            title = "Юмористическое шоу «На слабо» (первый мотор)",
+            time = "18:00",
+            location = "Трц Москва",
+            img = "https://sxodim.com/uploads/images/2023/12/16/optimized/37272c18e262f564a8236741c6278921_800xauto-q-85.jpg"
+        ),
+
+
+        )

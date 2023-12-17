@@ -11,5 +11,5 @@ data class Apartments(
     val description:String,
     val price:Int,
     val address:String,
-    val image:Image
+    val img:String
 )
