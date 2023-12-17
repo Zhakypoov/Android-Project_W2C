@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">W2C</string>
+    <string name="event_title">Events</string>
+    <string name="login">Авторизация</string>
+    <string name="register">Регистрация</string>
+    <string name="w2c">Welcome to the city</string>
+</resources>
