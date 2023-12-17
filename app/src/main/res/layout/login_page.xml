@@ -35,7 +35,7 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_below="@id/topImageView"
-            app:srcCompat="@drawable/device" />
+            app:srcCompat="@drawable/login" />
 
         <TextView
             android:id="@+id/register"
@@ -43,7 +43,7 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_below="@id/imageView3"
-            android:text="@string/register"
+            android:text="@string/login"
             android:fontFamily="@font/lato_bold"
             android:textColor="#843434"
             android:textSize="20dp"
@@ -52,6 +52,8 @@
 
 
             />
+
+
 
         <LinearLayout
             android:id="@+id/linear1"
@@ -63,40 +65,8 @@
             android:orientation="vertical">
 
             <TextView
+                android:layout_marginTop="15dp"
                 android:id="@+id/town"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-
-                android:fontFamily="@font/roboto"
-
-                android:text="ВАШ ГОРОД"
-
-
-                android:textSize="13dp" />
-
-            <Spinner
-                android:background="@drawable/spinner_border"
-                android:id="@+id/spinner"
-                android:layout_height="wrap_content"
-                android:popupBackground="#FFFFFF"
-
-                android:layout_width="match_parent"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/linear2"
-            android:layout_width="352dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="5dp"
-            android:layout_below="@id/linear1"
-            android:orientation="vertical">
-
-
-            <TextView
-
-                android:id="@+id/fio"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
 
@@ -118,14 +88,13 @@
                 android:hint=" +7" />
 
         </LinearLayout>
-
         <LinearLayout
-            android:id="@+id/linear3"
+            android:id="@+id/linear2"
             android:layout_width="352dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="5dp"
-            android:layout_below="@id/linear2"
+            android:layout_below="@id/linear1"
             android:orientation="vertical">
 
 
@@ -150,56 +119,21 @@
                 android:textSize="15dp"
                 android:textAlignment="inherit"
                 android:inputType="textPassword"
-                android:hint=" Придумайте пароль" />
+                android:hint=" Введите пароль" />
 
         </LinearLayout>
 
-        <LinearLayout
-            android:id="@+id/linear4"
-            android:layout_width="352dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="5dp"
-            android:layout_below="@id/linear3"
-            android:orientation="vertical">
 
-
-            <TextView
-
-                android:id="@+id/passwordAgain"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-
-                android:fontFamily="@font/roboto"
-
-                android:text="ПОДТВЕРДИТЬ ПАРОЛЬ"
-
-
-                android:textSize="13dp" />
-
-            <EditText
-                android:background="@drawable/spinner_border"
-                android:id="@+id/passwordAgainText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="15dp"
-                android:textAlignment="inherit"
-                android:inputType="textPassword"
-                android:hint=" Подтвердите пароль" />
-
-        </LinearLayout>
 
         <Button
-            android:id="@+id/nextButton"
-            style="@style/MyButtonStyle"
             android:layout_width="277dp"
             android:layout_height="44dp"
             android:text="Дальше"
-
+            android:layout_below="@id/linear2"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="51dp"
-            android:layout_below="@id/linear4"
             android:textColor="@color/white"
+            style="@style/MyButtonStyle"
             />
 
 
