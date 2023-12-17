@@ -52,6 +52,7 @@ android {
     namespace = "com.example.w2c"
 }
 dependencies {
+    implementation("androidx.compose.material:material-icons-extended")
 
     implementation("androidx.room:room-runtime:${rootProject.extra["room_version"]}")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
