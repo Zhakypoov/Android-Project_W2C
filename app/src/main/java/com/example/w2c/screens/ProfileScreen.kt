@@ -38,6 +38,8 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -79,20 +81,30 @@ fun ProfileScreen(){
         }
         Spacer(modifier = Modifier.height(15.dp))
         Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.Center){
-            Text(text = "Chauvbayev Bekzat", fontWeight = FontWeight.Bold, fontSize = 17.sp)
+            Text(text = "Чаувбаев Бекзат", fontWeight = FontWeight.W500, fontSize = 17.sp)
         }
         Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.Center){
-            Text(text = "20 лет", fontWeight = FontWeight.Bold, fontSize = 12.sp)
+            Text(text = "20 лет",  fontSize = 12.sp, fontWeight = FontWeight.Light)
         }
+        Spacer(modifier = Modifier.height(15.dp))
 
         Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.Center) {
             Column {
                 Row() {
-                    Image(painterResource(id = R.drawable.icons_whatsapp), contentDescription = "")
+                    Image(painterResource(id = R.drawable._icon__logo_facebook_), contentDescription = "" ,
+                        Modifier
+                            .height(25.dp)
+                            .width(25.dp))
                     Spacer(modifier = Modifier.width(10.dp))
-                    Image(painterResource(id = R.drawable.icons_telegram), contentDescription = "")
+                    Image(painterResource(id = R.drawable._icon__logo_instagram_), contentDescription = "",
+                        Modifier
+                            .height(25.dp)
+                            .width(25.dp))
                     Spacer(modifier = Modifier.width(10.dp))
-                    Image(painterResource(id = R.drawable.icons_instagram), contentDescription = "")
+                    Image(painterResource(id = R.drawable._icon__logo_twitter_), contentDescription = "" ,
+                        Modifier
+                            .height(25.dp)
+                            .width(25.dp))
                 }
             }
 

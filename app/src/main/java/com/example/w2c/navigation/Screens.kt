@@ -5,5 +5,8 @@ enum class Screens {
     RoommateScreen,
     ChatScreen,
     EventScreen,
-    ProfileScreen
+    ProfileScreen,
+    WelcomeScreen,
+    LoginScreen,
+    RegisterScreen
 }

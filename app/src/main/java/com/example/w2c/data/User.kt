@@ -1,15 +1,26 @@
 package com.example.w2c.data
 
+import androidx.annotation.NonNull
+import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import java.net.PasswordAuthentication
 
-@Entity
+@Entity(tableName = "users")
 data class User(
-    @PrimaryKey val id: Int,
-    val name: String,
-    val surname:String,
-    val number:Number,
-    val password:String,
+    @PrimaryKey(autoGenerate = true) val id: Int = 0,
+    @NonNull
+    @ColumnInfo(name = "city")
+    val city: String,
+    @NonNull
+    @ColumnInfo(name = "number")
+    val number: String,
+    @NonNull
+    @ColumnInfo(name = "password")
+    val password: String,
+    @NonNull
+    @ColumnInfo(name = "passwordAgain")
     val passwordAgain: String
 )
+
+

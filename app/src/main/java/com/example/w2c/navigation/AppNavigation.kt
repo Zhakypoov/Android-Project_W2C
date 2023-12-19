@@ -1,6 +1,8 @@
 package com.example.w2c.navigation
 
+import android.view.LayoutInflater
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.material.BottomNavigation
@@ -11,9 +13,11 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.viewinterop.AndroidView
 import androidx.navigation.NavDestination.Companion.hierarchy
 import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.NavHostController
@@ -31,6 +35,7 @@ import com.example.w2c.screens.HomeScreen
 import com.example.w2c.screens.ProfileScreen
 import com.example.w2c.screens.RoommateScreen
 import com.example.w2c.screens.EventScreen
+import com.example.w2c.screens.WelcomeScreen
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -81,12 +86,10 @@ fun AppNavigation(){
              composable(route = Screens.HomeScreen.name){
                  HomeScreen()
              }
-            composable(route = Screens.RoommateScreen.name){
-                RoommateScreen()
-            }
             composable(route = Screens.ChatScreen.name){
                 ChatScreen()
             }
+
             composable(route = Screens.EventScreen.name){
                 EventScreen(events = eventslist)
             }
@@ -94,6 +97,19 @@ fun AppNavigation(){
                 ProfileScreen()
             }
 
+
         }
     }
+
+}
+@Composable
+fun RegisterPageContent() {
+    val context = LocalContext.current
+
+    AndroidView(
+        modifier = Modifier.fillMaxSize(),
+        factory = { context ->
+            LayoutInflater.from(context).inflate(R.layout.register_page, null)
+        }
+    )
 }

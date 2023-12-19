@@ -15,26 +15,24 @@ data class NavItems(
 val listOfNavItems = listOf(
     NavItems(
         label = "Home",
-        icon = R.drawable.home_01 ,
+        icon = R.drawable.home_01__1_ ,
         route = Screens.HomeScreen.name,
 
     ),
 
     NavItems(
         label = "Chat",
-        icon = R.drawable.chat_btn,
-        route = Screens.
-
-        ChatScreen.name
+        icon = R.drawable.message_more,
+        route = Screens.ChatScreen.name
     ),
     NavItems(
         label = "Event",
-        icon = R.drawable.event_btn,
+        icon = R.drawable.calendar_week,
         route = Screens.EventScreen.name
     ),
     NavItems(
         label = "Profile",
-        icon = R.drawable.profile_btn,
+        icon = R.drawable.circle_user_svgrepo_com_1,
         route = Screens.ProfileScreen.name
     )
 )
