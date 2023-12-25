@@ -114,20 +114,33 @@ fun ProfileScreen(){
         // _____________________________________________________________________________
         // О себе
         Row {
-            ScrollInfo(name = "O себе", info = "About you")
+            ScrollInfo(name = "O себе", info = "Учусь в университете имени Сулеймана Демиреля . С понедельника по пятницу с 9 до 16:00 нахожусь в университете, в 7 вечера три раза в неделю хожу в зал. Не терплю запах сигарет и алкоголь")
         }
 
         // Плохие привычки
         Row {
-            ScrollInfo(name = "O себе", info = "About you")
+            ScrollInfo(name = "Соседи", info = "\n" +
+                    "Bohram Ismailov\n" +
+                    "John Urman\n" +
+                    "Carl Johnson\n" +
+                    "Tommy Versetty\n" +
+                    "Bekzat Sungatuly")
         }
 
         // Интересы
         Row {
-            ScrollInfo(name = "O себе", info = "About you")
+            ScrollInfo(name = "Плохие привычки", info = "\n" +
+                    "Алкоголизм\n" +
+                    "Игровая зависимость или лудомания\n" +
+                    "Телевизионная зависимость\n" +
+                    "Интернет-зависимость")
         }
         Row {
-            ScrollInfo(name = "O себе", info = "About you")
+            ScrollInfo(name = "Интересы", info = "Аниме\n" +
+                    "Игры\n" +
+                    "Разработка игр\n" +
+                    "Микроинженерия\n" +
+                    "Хоббихорсинг")
         }
     }
 }
